@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initializeCards();
 });
 
-// armazena a database
+// armazena o banco de dados
 let database = "../database.json";
 
 // inicializar os cards
@@ -12,8 +12,9 @@ function initializeCards() {
     .then((response) => {
       return response.json();
     })
-    .then((dataMentors) => showMentors(dataMentors)).catch(error =>{
-        console.log(error)
+    .then((dataMentors) => showMentors(dataMentors))
+    .catch((error) => {
+      console.log(error);
     });
 }
 
@@ -21,7 +22,7 @@ function initializeCards() {
 function createCard(dataMentors, id) {
   // área onde mostrará os cards dos mentores
   let content = document.querySelector(".content");
-
+  
   // cria a estrutura do card e adiciona a área de conteúdo (content)
   let card = document.createElement("div");
   card.setAttribute("class", "card my-4 box-sizing");
@@ -50,11 +51,15 @@ function createCard(dataMentors, id) {
   category.textContent = dataMentors.mentors[id].category;
   cardBody.appendChild(category);
 
-  // adiciona o botão para ver o perfil do mentor em uma segunda tela
+  // adiciona o botão para ver o perfil do mentor em uma segunda tela, ao clicar no botão é identificado o id do mentor
   let buttonProfile = document.createElement("button");
   buttonProfile.setAttribute("class", "btn btn-warning btn-outline-dark");
   buttonProfile.setAttribute("class", "btn btn-warning btn-outline-dark");
   buttonProfile.innerHTML = "Ver perfil";
+  buttonProfile.addEventListener('click', function(e){
+    let identity = (e.target.id)
+    openProfile(identity)
+  })
   cardBody.appendChild(buttonProfile);
 }
 
@@ -64,4 +69,11 @@ function showMentors(dataMentors) {
   for (let i = 0; i < 4; i++) {
     createCard(dataMentors, i);
   }
+}
+
+
+
+function openProfile(identity){
+  window.location.href = "../pages/mentor_profile.html"
+  return identity
 }
