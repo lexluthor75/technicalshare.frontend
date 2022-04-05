@@ -12,7 +12,9 @@ function initializeCards() {
     .then((response) => {
       return response.json();
     })
-    .then((dataMentors) => showMentors(dataMentors));
+    .then((dataMentors) => showMentors(dataMentors)).catch(error =>{
+        console.log(error)
+    });
 }
 
 // cria os cards e adiciona a info de cada usuário dentro deles
