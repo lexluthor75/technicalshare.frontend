@@ -3,10 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
   initializeCards();
 });
 
-// armazena a database
+// armazena o banco de dados
 let database = "../database.json";
-
-let identity = [];
 
 // inicializar os cards
 function initializeCards() {
@@ -54,7 +52,7 @@ function createCard(dataMentors, id) {
   category.textContent = dataMentors.mentors[id].category;
   cardBody.appendChild(category);
 
-  // adiciona o botão para ver o perfil do mentor em uma segunda tela
+  // adiciona o botão para ver o perfil do mentor em uma segunda tela, ao clicar no botão é identificado o id do mentor
   let buttonProfile = document.createElement("button");
   buttonProfile.setAttribute("class", "btn");
   buttonProfile.setAttribute("class", "btn-primary");
@@ -73,13 +71,11 @@ function showMentors(dataMentors) {
   for (let i = 0; i < 4; i++) {
     createCard(dataMentors, i);
   }
-
-  console.log(identity)
 }
 
 
 
 function openProfile(identity){
   window.location.href = "../pages/mentor_profile.html"
-  console.log(identity)
+  return identity
 }
