@@ -25,8 +25,7 @@ function createCard(dataMentors, id) {
   
   // cria a estrutura do card e adiciona a área de conteúdo (content)
   let card = document.createElement("div");
-  card.setAttribute("class", "card");
-  // card.setAttribute("id", id)
+  card.setAttribute("class", "card my-4 box-sizing");
   content.appendChild(card);
 
   // adiciona a imagem do mentor dentro do card
@@ -37,7 +36,7 @@ function createCard(dataMentors, id) {
 
   // adiciona a estrutura do card body (onde ficarão as demais infos)
   let cardBody = document.createElement("div");
-  cardBody.setAttribute("class", "card-body");
+  cardBody.setAttribute("class", "card-body d-flex flex-column justify-content-around");
   card.appendChild(cardBody);
 
   // adiciona o nome do mentor
@@ -48,15 +47,14 @@ function createCard(dataMentors, id) {
 
   // adiciona a category (área de interesse)
   let category = document.createElement("p");
-  category.setAttribute("class", "card-text");
+  category.setAttribute("class", "card-text text-muted");
   category.textContent = dataMentors.mentors[id].category;
   cardBody.appendChild(category);
 
   // adiciona o botão para ver o perfil do mentor em uma segunda tela, ao clicar no botão é identificado o id do mentor
   let buttonProfile = document.createElement("button");
-  buttonProfile.setAttribute("class", "btn");
-  buttonProfile.setAttribute("class", "btn-primary");
-  buttonProfile.setAttribute("id", id)
+  buttonProfile.setAttribute("class", "btn btn-warning btn-outline-dark");
+  buttonProfile.setAttribute("class", "btn btn-warning btn-outline-dark");
   buttonProfile.innerHTML = "Ver perfil";
   buttonProfile.addEventListener('click', function(e){
     let identity = (e.target.id)
