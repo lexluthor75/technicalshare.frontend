@@ -6,14 +6,17 @@ document.addEventListener("DOMContentLoaded", () => {
 // armazena a database
 let database = "../database.json";
 
+let identity = [];
+
 // inicializar os cards
 function initializeCards() {
   fetch(database)
     .then((response) => {
       return response.json();
     })
-    .then((dataMentors) => showMentors(dataMentors)).catch(error =>{
-        console.log(error)
+    .then((dataMentors) => showMentors(dataMentors))
+    .catch((error) => {
+      console.log(error);
     });
 }
 
@@ -21,10 +24,11 @@ function initializeCards() {
 function createCard(dataMentors, id) {
   // área onde mostrará os cards dos mentores
   let content = document.querySelector(".content");
-
+  
   // cria a estrutura do card e adiciona a área de conteúdo (content)
   let card = document.createElement("div");
   card.setAttribute("class", "card");
+  // card.setAttribute("id", id)
   content.appendChild(card);
 
   // adiciona a imagem do mentor dentro do card
@@ -54,7 +58,12 @@ function createCard(dataMentors, id) {
   let buttonProfile = document.createElement("button");
   buttonProfile.setAttribute("class", "btn");
   buttonProfile.setAttribute("class", "btn-primary");
+  buttonProfile.setAttribute("id", id)
   buttonProfile.innerHTML = "Ver perfil";
+  buttonProfile.addEventListener('click', function(e){
+    let identity = (e.target.id)
+    openProfile(identity)
+  })
   cardBody.appendChild(buttonProfile);
 }
 
@@ -64,4 +73,13 @@ function showMentors(dataMentors) {
   for (let i = 0; i < 4; i++) {
     createCard(dataMentors, i);
   }
+
+  console.log(identity)
+}
+
+
+
+function openProfile(identity){
+  window.location.href = "../pages/mentor_profile.html"
+  console.log(identity)
 }
