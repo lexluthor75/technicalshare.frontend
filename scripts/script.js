@@ -33,7 +33,7 @@ function createCard(dataMentors, id) {
   // adiciona a imagem do mentor dentro do card
   let image = document.createElement("img");
   image.setAttribute("class", "card-img-top");
-  image.setAttribute("src", "../assets/user.svg");
+  image.setAttribute("src", "../assets/images/user.svg");
   card.appendChild(image);
 
   // adiciona a estrutura do card body (onde ficarão as demais infos)
@@ -74,6 +74,7 @@ function showMentors(dataMentors) {
   }
 }
 
+// o window.location redirect será substituído por uma rota
 function openProfile(identity){
   console.log(identity)
   window.location.href = "../pages/mentor_profile.html"
