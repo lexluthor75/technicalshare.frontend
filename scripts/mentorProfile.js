@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 let database = "../database.json";
 
 // simular a entrada do id do mentor
-const idMentor = 0;
+const idMentor = 2;
 
 // inicializar as informações do mentor
 function initializeInfo() {
