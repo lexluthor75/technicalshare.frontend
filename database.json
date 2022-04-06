@@ -2,19 +2,23 @@
     "mentors": [
       {
         "name": "Larissa Orikava",
-        "category": "UX Design" 
+        "category": "UX Design",
+        "rating": "4" 
       },
       {
         "name": "Luiz Nola",
-        "category": "Desenvolvimento Fullstack"
+        "category": "Desenvolvimento Fullstack",
+        "rating": "5" 
       },
       {
         "name": "Guilherme Silva",
-        "category": "Marketing"
+        "category": "Marketing",
+        "rating": "3" 
       },
       {
         "name": "Mariana Mendanha",     
-        "category": "Marketing"
+        "category": "Marketing",
+        "rating": "4" 
       }
     ]
   }
