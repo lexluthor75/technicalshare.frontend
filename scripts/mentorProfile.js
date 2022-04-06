@@ -3,23 +3,27 @@
 
 let mentores = [
   {
-    nome: "Larissa Orikava",
-    areaInteresse: "UX Design",
+    name: "Larissa Orikava",
+    category: "UX Design",
   },
   {
-    nome: "Luiz Nola",
-    areaInteresse: "Desenvolvimento Fullstack",
+    name: "Luiz Nola",
+    category: "Desenvolvimento Fullstack",
   },
   {
-    nome: "Guilherme Silva",
-    areaInteresse: "Marketing",
+    name: "Guilherme Silva",
+    category: "Marketing",
   },
   {
-    nome: "Mariana Mendanha",
-    areaInteresse: "Marketing",
+    name: "Mariana Mendanha",
+    category: "Marketing",
   },
 ];
 
-// pegar as áreas de nome e category da tela
+// pegar as áreas de nome e categoria da tela
 let mentorName = document.getElementById("mentor-name-profile");
 let category = document.getElementById("category-profile");
+
+// vai receber o id do mentor
+mentorName.textContent = mentores[0].name
+category.textContent = mentores[0].category
