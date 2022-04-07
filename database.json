@@ -3,22 +3,22 @@
       {
         "name": "Larissa Orikava",
         "category": "UX Design",
-        "rating": "4" 
+        "skills": {"skill_1":"UX Research", "rating": "4"} 
       },
       {
         "name": "Luiz Nola",
-        "category": "Desenvolvimento Fullstack",
-        "rating": "5" 
+        "category": "Fullstack",
+        "skills": {"skill_1":"Front-end", "rating": "5"}  
       },
       {
-        "name": "Guilherme Silva",
-        "category": "Marketing",
-        "rating": "3" 
+        "name": "Nathalia Calza",
+        "category": "Fullstack",
+        "skills": {"skill_1":"Back-end", "rating": "4"} 
       },
       {
         "name": "Mariana Mendanha",     
         "category": "Marketing",
-        "rating": "4" 
+        "skills": {"skill_1":"UX Research", "rating": "4"}
       }
     ]
   }

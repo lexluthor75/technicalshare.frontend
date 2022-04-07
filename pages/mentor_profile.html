@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/mentor_profile.css">
     <title>Perfil do Mentor</title>
 </head>
@@ -16,14 +17,15 @@
         <div class="d-flex">
             <img style="width: 50vw;" src="../assets/images/user.svg" alt="">
             <div>
-                <h1 id="mentor-name-profile" class="mt-5" style="">Nome</h1>
-                
+                <h1 id="mentor-name-profile" class="mt-5">Nome</h1>
+                <h3 id="category-profile"></h3>
+
                 <p id="description-profile"></p>
             </div>
         </div>
         <div class="card mb-5">
             <div class="d-flex align-center">
-                <h3 id="category-profile">Áreas de Interesse</h3>
+                <h3 id="skill-profile">Áreas de Interesse</h3>
                 <ul id="classStar" class="d-flex">
                     <li class="star-icon" data-avaliacao="1"></li>
                     <li class="star-icon" data-avaliacao="2"></li>
@@ -33,14 +35,20 @@
                 </ul>
             </div>
         </div>
-        <div class="text-center mb-4">
-            <h4>Calendário</h4>
-        </div>
+        <div class="calendar"></div>
         <div class="d-flex flex-column mb-5" style="width: 15vw;">
             <div>
                 <h4>Plataformas</h4>
                 <img src="../assets/icons/discord.svg" alt="">
                 <img src="../assets/icons/zoom.svg" alt="">
+            </div>
+            <div>
+                <input type="radio" name="" id="time-1">
+                <input type="radio" name="" id="time-2">
+                <input type="radio" name="" id="time-3">
+                <input type="radio" name="" id="time-4">
+                <input type="radio" name="" id="time-5">
+                <input type="radio" name="" id="time-6">
             </div>
             <div>
 
@@ -66,6 +74,7 @@
         crossorigin="anonymous"></script>
 
     <script src="../scripts/mentorProfile.js"></script>
+    <script src="../scripts/calendar.js"></script>
 
 </body>
 

@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 let database = "../database.json";
 
 // simular a entrada do id do mentor
-const idMentor = 2;
+const idMentor = 0;
 
 // inicializar as informações do mentor
 function initializeInfo() {
@@ -25,11 +25,15 @@ function showInfo(dataMentors) {
   // pegar as áreas de nome e categoria da tela
   let mentorName = document.getElementById("mentor-name-profile");
   let category = document.getElementById("category-profile");
+  let skill = document.getElementById("skill-profile")
 
   // vai receber o id do mentor
   mentorName.textContent = dataMentors.mentors[idMentor].name;
   category.textContent = dataMentors.mentors[idMentor].category;
-  let rating = parseFloat(dataMentors.mentors[idMentor].rating);
+  skill.textContent = dataMentors.mentors[idMentor].skills.skill_1
+  
+  // mostrar a avaliação da habilidade
+  let rating = parseFloat(dataMentors.mentors[idMentor].skills.rating);
 
   // todas as estrelas do HTML
   const stars = document.querySelectorAll(".star-icon");
