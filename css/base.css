@@ -15,9 +15,6 @@ body {
   background-color: var(--color-grey);
 }
 
-.container {
-  margin: 4rem;
-}
 
 .sr-only {
   position: absolute;
