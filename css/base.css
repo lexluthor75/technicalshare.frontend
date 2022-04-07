@@ -1,32 +1,32 @@
 :root {
-    --color-purple: #36357E;
-    --color-orange: #FE4400;
-    --color-white: #ffffff;
-    --color-grey: #DEDEDE; 
+  --color-purple: #36357e;
+  --color-orange: #fe4400;
+  --color-white: #ffffff;
+  --color-grey: #dedede;
 }
 
 @font-face {
-    font-family: "Metropolis";
-    src: url("../assets/fonts/Metropolis-Regular.otf");
+  font-family: "Metropolis";
+  src: url("../assets/fonts/Metropolis-Regular.otf");
 }
 
-body{
-    font-family: "Metropolis";
-    background-color: var(--color-grey) ;
+body {
+  font-family: "Metropolis";
+  background-color: var(--color-grey);
 }
 
-.container{
-    margin: 2rem;
+.container {
+  margin: 4rem;
 }
 
 .sr-only {
-    position: absolute;
-    height: 1px;
-    width: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip-path: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
-  }
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
