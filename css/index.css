@@ -1,5 +1,6 @@
 @import url("./header.css");
 @import url("./cards.css");
+@import url("./footer.css");
 
 .search {
   display: flex;
@@ -100,5 +101,4 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 2rem;
 }
