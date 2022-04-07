@@ -147,3 +147,28 @@ body {
     margin: auto;
   }
 }
+
+
+/* DESKTOP */
+@media screen and (min-width: 1024px) {
+  .about{
+    width: 70vw;
+  }
+
+  .search__content{
+    width: 400px;
+    height: 65px;
+  }
+
+  .search__input {
+    padding: 1rem 2rem 1rem 3rem;
+  }
+
+  .search__input::placeholder {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  .cards{
+    width: 60vw;
+  }
+}
