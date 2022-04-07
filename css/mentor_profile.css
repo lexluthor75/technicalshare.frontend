@@ -1,11 +1,76 @@
+@import url("./base.css");
+@import url("./header.css");
 @import url("calendar.css");
 
+.mentor{
+  background-color: var(--color-white);
+  margin: 1rem 1.5rem;
+  border-radius: 5px;
+}
+.mentor__info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mentor__image{
+  width: 83px;
+  height: 83px;
+  border-radius: 50%;
+  padding: 1rem;
+}
+
+.mentor__title{
+  font-size: 0.75rem;
+}
+
+.mentor__category{
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+  background-color: var(--color-orange);
+  color: var(--color-white);
+  padding: 0.5rem 0.25rem;
+  border-radius: 5px;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.mentor__structure{
+  background-color: var(--color-purple);
+  color: var(--color-white);
+  font-size: 0.75rem;
+  font-weight: 400;
+  margin: 1rem 2rem;
+  border-radius: 5px;
+  height: 60px
+
+}
+
+.mentor__waves{
+  background: transparent url("../assets/images/waves.png") no-repeat;
+  background-size: cover;
+  width: 20px;
+  height: 60px;
+  float: left;
+}
+
+.mentor__rating{
+  padding: 1rem 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.mentor__stars{
+  display: flex;
+}
 .star-icon {
   list-style-type: none;
-  border: 1px solid #ffffff;
+  /* border: 1px solid #ffffff; */
   cursor: pointer;
-  color: #ffe500;
-  font-size: 40px;
+  color: var(--color-orange);
+  font-size: 20px;
 }
 
 .star-icon::before {
