@@ -66,3 +66,22 @@
   position: relative;
   float: right;
 }
+
+.register{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.register__button{
+    background-color: var(--color-orange);
+    color: var(--color-white);
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.75rem;
+    box-shadow: 0 4px 4px 1px #AC360B;
+
+}
