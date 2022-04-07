@@ -27,7 +27,7 @@ function createCard(dataMentors, id) {
   
   // cria a estrutura do card e adiciona a área de conteúdo (content)
   let card = document.createElement("div");
-  card.setAttribute("class", "card my-4 box-sizing");
+  card.setAttribute("class", "card");
   content.appendChild(card);
 
   // adiciona a imagem do mentor dentro do card
