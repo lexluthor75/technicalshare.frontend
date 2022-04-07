@@ -1,0 +1,15 @@
+:root {
+    --color-purple: #36357E;
+    --color-orange: #FE4400;
+    --color-white: #ffffff;
+
+    @font-face {
+        font-family: "Metropolis";
+        src: url("../assets/fonts/Metropolis-Regular.otf");
+    }
+
+}
+
+body{
+    font-family: "Metropolis";
+}
