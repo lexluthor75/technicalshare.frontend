@@ -1,0 +1,24 @@
+{
+  "mentors": [
+    {
+      "name": "Larissa Orikava",
+      "category": "UX Design",
+      "skills": {"skill_1":"UX Research", "rating": "4"} 
+    },
+    {
+      "name": "Luiz Nola",
+      "category": "Fullstack",
+      "skills": {"skill_1":"Front-end", "rating": "5"}  
+    },
+    {
+      "name": "Nathalia Calza",
+      "category": "Fullstack",
+      "skills": {"skill_1":"Back-end", "rating": "4"} 
+    },
+    {
+      "name": "Mariana Mendanha",     
+      "category": "Marketing",
+      "skills": {"skill_1":"UX Research", "rating": "4"}
+    }
+  ]
+}
