@@ -1,0 +1,28 @@
+:root {
+    --color-purple: #36357E;
+    --color-orange: #FE4400;
+    --color-white: #ffffff;
+    --color-grey: #DEDEDE; 
+}
+
+@font-face {
+    font-family: "Metropolis";
+    src: url("../assets/fonts/Metropolis-Regular.otf") format("opentype");
+}
+
+body{
+    font-family: "Metropolis";
+    background-color: var(--color-grey) ;
+}
+
+.sr-only {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
