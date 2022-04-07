@@ -19,6 +19,7 @@
 
 .card__info {
   width: 130px;
+  padding-right: 0.5rem;
 }
 
 .card__title {
