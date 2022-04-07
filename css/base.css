@@ -7,12 +7,16 @@
 
 @font-face {
     font-family: "Metropolis";
-    src: url("../assets/fonts/Metropolis-Regular.otf") format("opentype");
+    src: url("../assets/fonts/Metropolis-Regular.otf");
 }
 
 body{
     font-family: "Metropolis";
     background-color: var(--color-grey) ;
+}
+
+.container{
+    margin: 2rem;
 }
 
 .sr-only {
