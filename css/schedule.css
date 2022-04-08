@@ -23,20 +23,6 @@
     width: 35px;
   }
   
-  .scheduling__input{
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    padding-right: 0.25rem;
-  }
-  
-  .scheduling__input:hover input{
-    background-color: #ccc;
-  }
-  
-  .scheduling__input input:checked{
-    background-color: var(--color-purple);
-  }
   
   .schedules{
     display: flex;

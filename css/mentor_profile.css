@@ -1,5 +1,6 @@
 @import url("./base.css");
 @import url("./header.css");
+@import url("./buttons.css");
 @import url("./schedule.css");
 @import url("./calendar.css");
 @import url("./footer.css");
@@ -80,7 +81,6 @@ hr{
 }
 .star-icon {
   list-style-type: none;
-  /* border: 1px solid #ffffff; */
   cursor: pointer;
   color: var(--color-orange);
   font-size: 20px;
@@ -95,10 +95,9 @@ hr{
 }
 
 .star-icon.ativo ~ .star-icon::before {
-  content: "\2606";
+  content: "\2605";
+  color: var(--color-white);
 }
-
-
 
 .mentor__button{
   display: flex;
@@ -106,16 +105,6 @@ hr{
   margin: 1rem 0 3rem 0;
 }
 
-.button__cta{
-  background-color: var(--color-orange);
-  color: var(--color-white);
-  text-decoration: none;
-  padding: 0.5rem 0.75rem;
-  border-radius: 5px;
-  text-transform: uppercase;
-  font-weight: bold;
-  box-shadow: 0 4px 4px 1px #ac360b;
-}
 
 /* TABLET */
 @media screen and (min-width: 768px) {
@@ -146,11 +135,6 @@ hr{
   .mentor__structure{
     width: 250px;
     margin: auto;
-  }
-
-  .button__cta{
-    font-size: 1rem;
-    padding: 1rem 1.5rem;
   }
  
 }
