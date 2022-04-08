@@ -1,0 +1,15 @@
+.footer{
+    background-color: var(--color-orange);
+    color: var(--color-white);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    line-height: 1.5;
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1024px) {
+    .footer{
+        font-size: 1rem;
+    }
+}
