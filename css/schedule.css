@@ -58,4 +58,31 @@
     border-radius: 5px;
     width: 70px;
   }
-  
+
+  /* TABLET */
+  @media  screen and (min-width: 768px) {
+    .scheduling__title{
+      font-size: 1rem;
+      margin-top: 2rem;
+    }
+
+    .scheduling__structure{
+      justify-content: space-around;
+    }
+
+    .plataforms__image{
+      width: 60px;
+    }
+
+ 
+    .schedules__options{
+      padding: 0.5rem;
+    }
+
+    .schedules h3{
+      font-size: 1rem;
+      width: max-content;
+      padding: 0.5rem;
+      width: 150px;
+    }
+  }
