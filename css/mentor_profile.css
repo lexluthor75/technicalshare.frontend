@@ -107,7 +107,7 @@ hr{
 
 
 /* TABLET */
-@media screen and (min-width: 768px) {
+@media screen and (min-width:768px) {
   .mentor{
     width: 80vw;
     margin: auto;
@@ -132,7 +132,7 @@ hr{
   }
 
   .mentor__title{
-    font-size: 2rem;
+    font-size: 1rem;
   }
 
   .mentor__category{
@@ -142,9 +142,11 @@ hr{
   }
 
   .mentor__evaluation{
-    width: 250px;
+    width: 220px;
     margin: auto;
   }
  
 }
+
+
 
