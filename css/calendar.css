@@ -79,7 +79,7 @@
   text-align: center;
   cursor: pointer;
   margin: 3px 0px;
-  background: var(--calendar-current-date-color);
+  background: var(--color-white);
   padding: 8px 0px;
   border-radius: 10px;
   width: 80%;

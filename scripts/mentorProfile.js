@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 let database = "../database.json";
 
 // simular a entrada do id do mentor
-const idMentor = 0;
+const idMentor = 3;
 
 // inicializar as informações do mentor
 function initializeInfo() {
@@ -30,7 +30,7 @@ function showInfo(dataMentors) {
   // vai receber o id do mentor
   mentorName.textContent = dataMentors.mentors[idMentor].name;
   category.textContent = dataMentors.mentors[idMentor].category;
-  skill.textContent = dataMentors.mentors[idMentor].skills.skill_1
+  skill.textContent = dataMentors.mentors[idMentor].skills.skill
   
   // mostrar a avaliação da habilidade
   let rating = parseFloat(dataMentors.mentors[idMentor].skills.rating);
@@ -38,18 +38,18 @@ function showInfo(dataMentors) {
   // todas as estrelas do HTML
   const stars = document.querySelectorAll(".star-icon");
   console.log(stars);
-  let listaStar = document.getElementById("classStar");
 
   // para pegar a posição correta no array stars
   let i = rating - 1;
+  
   // pega o valor do data-avaliacao 
   let av = stars[i].attributes[1].value;
-  console.log(av);
+  // console.log(av);
 
   // adiciona a classe ativo se o rating(avaliação) for igual a posição do data-avaliacao
   if (rating == av) {
     stars[i].classList.add("ativo");
-    console.log("funcionou");
-    console.log(stars);
+    // console.log("funcionou");
+    // console.log(stars);
   }
 }
