@@ -94,9 +94,12 @@ hr{
   content: "\2606";
 }
 
-/* .scheduling__structure{
+
+.scheduling__structure{
   display: flex;
-} */
+  justify-content: center;
+  padding: 1rem;
+}
 
 .scheduling__title{
   font-size: 0.75rem;
@@ -111,8 +114,10 @@ hr{
 
 .plataforms__options{
   display: flex;
+  justify-content: center;
   align-items: center;
-  margin: 1rem;
+  /* margin: 0.25rem; */
+  width: fit-content;
 }
 
 .plataforms__image{
@@ -138,10 +143,18 @@ hr{
   display: flex;
   /* justify-content: center; */
 }
+.schedules__options{
+  display: flex;
+  align-items: center;
+  margin-top: 0.25rem;
+}
+
 .schedules h3{
   background-color: var(--color-orange);
   color: var(--color-white);
+  text-align: center;
   font-size: 0.75rem;
   padding: 0.5rem 0.25rem;
   border-radius: 5px;
+  width: 70px;
 }
