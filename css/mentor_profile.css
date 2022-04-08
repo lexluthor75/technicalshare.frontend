@@ -50,7 +50,7 @@ hr{
   width: fit-content;
 }
 
-.mentor__structure{
+.mentor__evaluation{
   background-color: var(--color-purple);
   color: var(--color-white);
   font-size: 0.75rem;
@@ -132,9 +132,21 @@ hr{
     margin-bottom: 2rem;
   }
 
-  .mentor__structure{
+  .mentor__evaluation{
     width: 250px;
     margin: auto;
   }
  
+}
+
+@media screen and (min-width: 1024px) {
+  .mentor__structure{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .mentor__evaluation{
+    margin: 0;
+  }
 }
