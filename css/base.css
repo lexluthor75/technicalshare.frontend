@@ -3,6 +3,17 @@
     --color-orange: #fe4400;
     --color-white: #ffffff;
     --color-grey: #dedede;
+    --color-black: #000000;
+    --color-dark-grey: #565656;
+
+
+    /* CALENDAR */
+    --weekdays-border-bottom-color: #404040;
+    --calendar-date-hover-color: #505050;
+    --calendar-current-date-color: #1b1f21;
+    --calendar-today-innerborder-color: transparent;
+    --calendar-nextprev-bg-color: transparent;
+    --calendar-border-radius: 16px;
   }
   
   @font-face {

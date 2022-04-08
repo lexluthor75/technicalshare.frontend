@@ -1,31 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap");
 
-:root {
-  --calendar-bg-color: #dedede;
-  --calendar-font-color: #fff;
-  --weekdays-border-bottom-color: #404040;
+@import url("./base.css");
+
+/* :root {
+   --weekdays-border-bottom-color: #404040;
   --calendar-date-hover-color: #505050;
   --calendar-current-date-color: #1b1f21;
-  --calendar-today-color: linear-gradient(to bottom, #03a9f4, #2196f3);
   --calendar-today-innerborder-color: transparent;
   --calendar-nextprev-bg-color: transparent;
-  --next-prev-arrow-color: #fff;
   --calendar-border-radius: 16px;
-  --calendar-prevnext-date-color: #484848;
-}
-
-/* * {
-  padding: 0;
-  margin: 0;
 } */
 
+
+
 .calendar {
-  font-family: "IBM Plex Sans", sans-serif;
   position: relative;
-  max-width: 400px; /*change as per your design need */
+  max-width: 400px; 
   min-width: 250px;
-  background: var(--calendar-bg-color);
-  color: var(--calendar-font-color);
+  background: var(--color-grey);
+  color: var(--color-black);
   margin: 1rem 0.5rem 2rem 0.5rem;
   box-sizing: border-box;
   overflow: hidden;
@@ -62,7 +54,7 @@
 }
 
 .calendar .calendar-inner .calendar-body div > a {
-  color: var(--calendar-font-color);
+  color: var(--color-black);
   text-decoration: none;
   display: flex;
   justify-content: center;
@@ -99,6 +91,8 @@
   min-width: 100px;
   justify-content: space-evenly;
   align-items: center;
+  color: var(--color-purple);
+  font-weight: bold;
 }
 
 .calendar .calendar-inner .calendar-controls .calendar-next {
@@ -120,7 +114,7 @@
 }
 
 .calendar .calendar-inner .calendar-body .calendar-today {
-  background: var(--calendar-today-color);
+  background: var(--color-orange);
   border-radius: 4px;
 }
 
@@ -132,10 +126,14 @@
   outline: 2px solid var(--calendar-today-innerborder-color);
 }
 
+.calendar-days{
+  color: var(--color-orange);
+}
+
 .calendar .calendar-inner .calendar-controls .calendar-next a,
 .calendar .calendar-inner .calendar-controls .calendar-prev a {
-  color: var(--calendar-font-color);
-  font-family: arial, consolas, sans-serif;
+  color: var(--color-black);
+  /* font-family: arial, consolas, sans-serif; */
   font-size: 26px;
   text-decoration: none;
   padding: 4px 12px;
@@ -152,12 +150,12 @@
 
 .calendar .calendar-inner .calendar-controls .calendar-next a svg path,
 .calendar .calendar-inner .calendar-controls .calendar-prev a svg path {
-  fill: var(--next-prev-arrow-color);
+  fill: var(--color-black);
 }
 
 .calendar .calendar-inner .calendar-body .prev-dates,
 .calendar .calendar-inner .calendar-body .next-dates {
-  color: var(--calendar-prevnext-date-color);
+  color: var(--color-dark-grey);
 }
 
 .calendar .calendar-inner .calendar-body .prev-dates:hover,

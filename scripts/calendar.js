@@ -95,7 +95,7 @@ function CalendarControl() {
       for (let i = 0; i < calendarControl.calWeekDays.length; i++) {
         document.querySelector(
           ".calendar .calendar-body"
-        ).innerHTML += `<div>${calendarControl.calWeekDays[i]}</div>`;
+        ).innerHTML += `<div class="calendar-days">${calendarControl.calWeekDays[i]}</div>`;
       }
     },
     plotDates: function () {
