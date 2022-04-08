@@ -58,7 +58,7 @@
   /* TABLET */
   @media  screen and (min-width: 768px) {
     .scheduling__title{
-      font-size: 1rem;
+      font-size: 1.5rem;
       margin-top: 2rem;
     }
 
@@ -67,10 +67,9 @@
     }
 
     .plataforms__image{
-      width: 60px;
+      width: 80px;
     }
 
- 
     .schedules__options{
       padding: 0.5rem;
     }
@@ -78,7 +77,7 @@
     .schedules h3{
       font-size: 1rem;
       width: max-content;
-      padding: 0.5rem;
+      padding: 0.75rem;
       width: 150px;
     }
   }
