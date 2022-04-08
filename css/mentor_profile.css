@@ -107,10 +107,6 @@ hr{
   margin: 1rem;
 }
 
-/* .plataforms{
-  display: flex;
-  align-items: center;
-} */
 
 .plataforms__options{
   display: flex;
@@ -141,12 +137,13 @@ hr{
 
 .schedules{
   display: flex;
-  /* justify-content: center; */
 }
+
 .schedules__options{
   display: flex;
   align-items: center;
   margin-top: 0.25rem;
+  padding-left: 0.25rem;
 }
 
 .schedules h3{
@@ -154,7 +151,7 @@ hr{
   color: var(--color-white);
   text-align: center;
   font-size: 0.75rem;
-  padding: 0.5rem 0.25rem;
+  padding: 0.5rem 0.10rem;
   border-radius: 5px;
   width: 70px;
 }
