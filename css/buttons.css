@@ -1,0 +1,11 @@
+.button__cta{
+    background-color: var(--color-orange);
+    color: var(--color-white);
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    box-shadow: 0 4px 4px 1px #ac360b;
+}

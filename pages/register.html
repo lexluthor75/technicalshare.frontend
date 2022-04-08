@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/icons/logo_icon.svg" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/register.css">
+    <title>Technical Share</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="navbar">
+                <div class="container nav-container">
+                    <input class="checkbox" type="checkbox" name="" id="" />
+                    <div class="hamburger-lines">
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </div>
+                    <div class="logo">
+                        <h1><img src="../assets/images/logo.png" alt=""></h1>
+                    </div>
+                    <!-- <div>
+            <a href="#"><img src="./assets/icons/login.svg" alt=""></a>
+          </div> -->
+                    <div class="menu-items">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="#">Mentores</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="register">
+            <div class="register__content">
+                <div class="register__info">
+                    <img class="register__image" src="../assets/images/user.png" alt="">
+                    <label class="sr-only" for="name">Escreva seu nome</label>
+                    <input id="name" type="text" placeholder="Nome">
+                    <label class="sr-only" for="email">Escreva seu email</label>
+                    <input type="email" name="" id="email" placeholder="Email">
+                </div>
+                <div>
+                    <div class="register__specialty">
+                        <div class="select">
+                            <label class="sr-only" for="specialty">Escolha a sua especialidade</label>
+                            <select name="format" id="specialty">
+                                <option selected disabled>Especialidade</option>
+                                <option value="ux-design">UX Design</option>
+                                <option value="fullstack">Fullstack</option>
+                                <option value="scrum-master">SCRUM Master</option>
+                                <option value="front-end">Front-end</option>
+                                <option value="back-end">Back-end</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="register__specialty">
+                        <div class="select">
+                            <label class="sr-only" for="skill">Escolha um de suas habilidades</label>
+                            <select name="format" id="skill">
+                                <option selected disabled>Habilidade</option>
+                                <option value="ux-design">UX Research</option>
+                                <option value="fullstack">UX Writing</option>
+                                <option value="scrum-master">HTML</option>
+                                <option value="scrum-master">JavaScript</option>
+                                <option value="scrum-master">Node.js</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="register__profile">
+                    <div class="register__dots"></div>
+                    <h2 class="register__title">Perfil</h2>
+
+                    <div class="register__options">
+                        <div class="form-group">
+                            <input class="checkbox" type="checkbox" name="mentor" id="mentor">
+                            <label for="mentor">Mentor</label>
+                        </div>
+
+                        <div class="form-group">
+                            <input class="checkbox" type="checkbox" name="mentor" id="mentored">
+                            <label for="mentor">Mentorado</label>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </section>
+        <div class="register__button">
+            <button class="button__cta">Cadastrar</button>
+        </div>
+        
+
+
+
+    </main>
+
+    <footer class="footer">
+        <h4> &copy; Desenvolvido pelo Squad 20 - 2022</h4>
+    </footer>
+
+
+
+    <script>
+
+        let click = document.querySelector('.click');
+
+        let list = document.querySelector('.list');
+
+        click.addEventListener("click", () => {
+
+            list.classList.toggle('newlist');
+
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+@import url("base.css");
+@import url("header.css");
+@import url("buttons.css");
+@import url("inputs.css");
+@import url("footer.css");
+
+.register {
+  background-color: var(--color-white);
+  margin: 1rem 1.5rem;
+  border-radius: 5px;
+  padding-bottom: 0.15rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register__image {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  padding: 1rem;
+}
+
+.register__content{
+    width: 80%;
+}
+
+.register__info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.register__info input{
+    background-color: var(--color-purple);
+    color: var(--color-white);
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    width: 200px;
+    font-size: 0.875rem;
+
+}
+
+.register__info input::placeholder{
+    color: var(--color-white);
+    
+    
+}
+
+.register__specialty{
+    margin-top: 1rem;
+}
+
+.register__profile{
+    background-color: var(--color-purple);
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 1rem;
+    color: var(--color-white);
+    /* padding: 1rem 0.5rem; */
+}
+
+.register__dots{
+    background: transparent url("../assets/images/big_dots.png") no-repeat;
+    background-size: cover;
+    width: 60px;
+    height: 150px;
+    float: right;
+}
+
+.register__title{
+    padding: 1rem;
+}
+
+.register__options{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1rem 2rem 1rem;
+}
+
+.register__button{
+    display: flex;
+    justify-content: center;
+}
