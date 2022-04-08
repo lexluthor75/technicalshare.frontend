@@ -11,10 +11,12 @@ hr{
 }
 
 
-.mentor{
+
+.mentor__content{
   background-color: var(--color-white);
   margin: 1rem 1.5rem;
   border-radius: 5px;
+  padding-bottom: 0.15rem;
 }
 .mentor__info{
   display: flex;
@@ -155,3 +157,21 @@ hr{
   border-radius: 5px;
   width: 70px;
 }
+
+.mentor__button{
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0 3rem 0;
+}
+
+.button__cta{
+  background-color: var(--color-orange);
+  color: var(--color-white);
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  box-shadow: 0 4px 4px 1px #ac360b;
+}
+
