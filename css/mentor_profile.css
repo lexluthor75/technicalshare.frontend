@@ -112,6 +112,15 @@ hr{
     width: 80vw;
     margin: auto;
   }
+  
+
+  .mentor__structure{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+
   .mentor__info{
     align-items: center;
     text-align: center;
@@ -139,14 +148,3 @@ hr{
  
 }
 
-@media screen and (min-width: 1024px) {
-  .mentor__structure{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .mentor__evaluation{
-    margin: 0;
-  }
-}
