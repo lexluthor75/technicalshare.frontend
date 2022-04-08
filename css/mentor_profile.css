@@ -2,6 +2,15 @@
 @import url("./header.css");
 @import url("calendar.css");
 
+hr{
+  background-color: var(--color-grey);
+  color: var(--color-grey);
+  margin: 1rem;
+  height: 3px;
+  border: none;
+}
+
+
 .mentor{
   background-color: var(--color-white);
   margin: 1rem 1.5rem;
@@ -85,3 +94,54 @@
   content: "\2606";
 }
 
+/* .scheduling__structure{
+  display: flex;
+} */
+
+.scheduling__title{
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin: 1rem;
+}
+
+/* .plataforms{
+  display: flex;
+  align-items: center;
+} */
+
+.plataforms__options{
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+}
+
+.plataforms__image{
+  width: 35px;
+}
+
+.scheduling__input{
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  padding-right: 0.25rem;
+}
+
+.scheduling__input:hover input{
+  background-color: #ccc;
+}
+
+.scheduling__input input:checked{
+  background-color: var(--color-purple);
+}
+
+.schedules{
+  display: flex;
+  /* justify-content: center; */
+}
+.schedules h3{
+  background-color: var(--color-orange);
+  color: var(--color-white);
+  font-size: 0.75rem;
+  padding: 0.5rem 0.25rem;
+  border-radius: 5px;
+}
