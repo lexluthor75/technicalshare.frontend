@@ -48,6 +48,9 @@
   color: var(--color-white);
 }
 
+.register__options{
+  margin: 1rem auto;
+}
 
 .register__specialty {
   margin-top: 1rem;
@@ -56,7 +59,7 @@
 .register__profile {
   background-color: var(--color-purple);
   border-radius: 5px;
-  width: 100%;
+  width: 220px;
   margin: 1rem auto 1rem auto;
   color: var(--color-white);
   /* padding: 1rem 0.5rem; */
@@ -104,4 +107,25 @@
   }
 }
 
+
+@media screen and (min-width: 1024px) {
+  .register{
+    width: 70vw;
+    margin: 1rem auto;
+  }
+
+  .register__image{
+    width: 150px;
+    height: 150px;
+  }
+
+  .register__info input{
+    font-size: 1.2rem;
+  }
+
+  .register__profile{
+    width: 20vw;
+  }
+ 
+}
 
