@@ -58,7 +58,6 @@
 @media screen and (min-width: 768px) {
   .scheduling__title {
     font-size: 1rem;
-    margin-top: 2rem;
   }
 
   .scheduling__structure {
@@ -81,4 +80,9 @@
   }
 }
 
-
+@media screen and (min-width:1024px) {
+  .scheduling__title{
+    font-size: 1.5rem;
+    margin: 2rem 1rem 1rem 2rem;
+  }
+}

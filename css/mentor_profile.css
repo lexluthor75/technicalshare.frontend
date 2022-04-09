@@ -55,9 +55,11 @@ hr{
   color: var(--color-white);
   font-size: 0.75rem;
   font-weight: 400;
-  margin: 1rem 2rem;
+  margin: 1rem auto;
   border-radius: 5px;
-  height: 60px
+  height: 60px;
+  width: fit-content;
+  padding: 0 1rem 0 0;
 
 }
 
@@ -74,6 +76,10 @@ hr{
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+
+.mentor__categoryTitle{
+  padding: 0 1rem;
 }
 
 .mentor__stars{
@@ -148,5 +154,24 @@ hr{
  
 }
 
+/* DESKTOP */
+@media screen and (min-width: 1024px) {
+  .mentor__content{
+    width: 70vw;
+    margin: 1rem auto;
+  }
+  .mentor__structure{
+   justify-content: space-evenly;
+  }
 
+  .mentor__title{
+    font-size: 1.5rem;
+  }
 
+  .mentor__evaluation{
+    font-size: 1rem;
+    padding: 1rem;
+    margin: 0;
+    width: fit-content;
+  }
+}
