@@ -8,6 +8,8 @@ let database = "../database.json";
 
 let identity;
 
+let searchCategory = document.getElementById("search-category");
+
 // inicializar os cards
 function initializeCards() {
   fetch(database)
@@ -24,7 +26,7 @@ function initializeCards() {
 function createCard(dataMentors, id) {
   // área onde mostrará os cards dos mentores
   let cards = document.querySelector(".cards");
-  
+
   // cria a estrutura do card e adiciona a área de conteúdo (cards)
   let card = document.createElement("div");
   card.setAttribute("class", "card");
@@ -58,11 +60,10 @@ function createCard(dataMentors, id) {
   buttonProfile.setAttribute("class", "card__button");
   // buttonProfile.setAttribute("class", "btn btn-warning btn-outline-dark");
   buttonProfile.innerHTML = "Saiba +";
-  buttonProfile.addEventListener('click', function(e){
-    identity = (e.target.id)
-    openProfile(identity)
-
-  })
+  buttonProfile.addEventListener("click", function (e) {
+    identity = e.target.id;
+    openProfile(identity);
+  });
   cardBody.appendChild(buttonProfile);
 }
 
@@ -72,10 +73,23 @@ function showMentors(dataMentors) {
   for (let i = 0; i < 4; i++) {
     createCard(dataMentors, i);
   }
+
+  // chamar a função que filtra os mentores conforme categoria
+  searchCategory.addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+      console.log(searchCategory.value);
+      let categoriaProcurada = searchCategory.value.toUpperCase()
+      let filteredCategory = dataMentors.mentors.filter(function (search) {
+        let results = search.category.toUpperCase();
+        return results === categoriaProcurada;
+      });
+      console.log(filteredCategory);
+    }
+  });
 }
 
-function openProfile(identity){
-  console.log(identity)
-  window.location.href = "../pages/mentor_profile.html"
+function openProfile(identity) {
+  console.log(identity);
+  // window.location.href = "../pages/mentor_profile.html";
 }
 
