@@ -103,8 +103,6 @@ function showMentors(dataMentors) {
     }
   });
 
-  
-
   for (let i = 0; i < 4; i++) {
     createCard(dataMentors, i);
   }
@@ -112,15 +110,10 @@ function showMentors(dataMentors) {
  
 }
 
-function openProfile(identity) {
-  console.log(identity);
-  // window.location.href = "../pages/mentor_profile.html";
-}
+
 
 // cria os cards e adiciona a info de cada usuário dentro deles
 function createCardFiltered(filteredCategory, id) {
-  // área onde mostrará os cards dos mentores
-  let cards = document.querySelector(".cards");
 
   // cria a estrutura do card e adiciona a área de conteúdo (cards)
   let card = document.createElement("div");
@@ -160,4 +153,10 @@ function createCardFiltered(filteredCategory, id) {
     openProfile(identity);
   });
   cardBody.appendChild(buttonProfile);
+}
+
+
+function openProfile(identity) {
+  console.log(identity);
+  window.location.href = "../pages/mentor_profile.html";
 }
