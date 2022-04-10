@@ -1,6 +1,8 @@
 @import url("base.css");
 
-
+.logo__icon{
+  width: 200px;
+}
 .navbar{
   background-color: var(--color-orange);
   box-sizing: border-box;
