@@ -64,12 +64,14 @@ function createCard(dataMentors, id) {
     identity = e.target.id;
     openProfile(identity);
   });
+
   cardBody.appendChild(buttonProfile);
 }
 
 // função para inicializar a área de mentores na área de destaque
 // nesse primeiro momento pega os 4 primeiros registrados no Banco de dados
 function showMentors(dataMentors) {
+   // chamar a função que filtra os mentores conforme categoria quando der enter
   searchCategory.addEventListener("keypress", function (e) {
     if (e.key === "Enter") {
       console.log(searchCategory.value);
@@ -85,9 +87,11 @@ function showMentors(dataMentors) {
       });
 
       console.log(filteredCategory);
+
+      // caso não exista nenhum mentor da categoria procurada
       if (filteredCategory.length == 0) {
         cards.innerHTML = `<div class="search__notFound">
-        <h2>Categoria não encontrada digite novamente</h2>
+        <h2>Nenhum mentor dessa categoria foi encontrado. Digite novamente</h2>
       </div>`;
       }
 
@@ -105,7 +109,7 @@ function showMentors(dataMentors) {
     createCard(dataMentors, i);
   }
 
-  // chamar a função que filtra os mentores conforme categoria quando der enter
+ 
 }
 
 function openProfile(identity) {
