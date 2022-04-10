@@ -71,11 +71,11 @@
                             <label class="sr-only" for="skill">Escolha um de suas habilidades</label>
                             <select name="format" id="skill">
                                 <option selected disabled>Habilidade</option>
-                                <option value="ux-design">UX Research</option>
-                                <option value="fullstack">UX Writing</option>
-                                <option value="scrum-master">HTML</option>
-                                <option value="scrum-master">JavaScript</option>
-                                <option value="scrum-master">Node.js</option>
+                                <option value="ux-research">UX Research</option>
+                                <option value="ux-writing">UX Writing</option>
+                                <option value="html">HTML</option>
+                                <option value="javascript">JavaScript</option>
+                                <option value="node-js">Node.js</option>
                             </select>
                         </div>
                     </div>
@@ -87,12 +87,12 @@
 
                     <div class="specialty__options">
                         <div class="checkbox__group">
-                            <input class="checkbox" type="checkbox" name="mentor" id="mentor">
+                            <input class="checkbox" type="checkbox" name="mentor" id="mentor" value="mentor">
                             <label for="mentor">Mentor</label>
                         </div>
 
                         <div class="checkbox__group">
-                            <input class="checkbox" type="checkbox" name="mentor" id="mentored">
+                            <input class="checkbox" type="checkbox" name="mentor" id="mentored" value="mentorado">
                             <label for="mentor">Mentorado</label>
                         </div>
 
@@ -104,9 +104,9 @@
 
         </section>
         <div class="register__button">
-            <button class="button__cta">Cadastrar</button>
+            <button id="register" class="button__cta">Cadastrar</button>
         </div>
-        
+
 
 
 
@@ -116,9 +116,9 @@
         <h4> &copy; Desenvolvido pelo Squad 20 - 2022</h4>
     </footer>
 
+    <script src="../scripts/register.js"></script>
 
 
- 
 </body>
 
 </html>
