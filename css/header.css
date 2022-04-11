@@ -1,8 +1,5 @@
 @import url("base.css");
 
-.logo__icon{
-  width: 200px;
-}
 .navbar{
   background-color: var(--color-orange);
   box-sizing: border-box;
@@ -13,32 +10,10 @@
   align-items: center;
   padding: 1rem;
 }
-.navbar__menu{
-  display:flex;
-  justify-content: space-between;
-  flex-direction: row;
-  gap: 1.3rem;
-}
-
-.navbar__menu-item{
-  font-family: "Metropolis", sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-}
-
 .navbar__hamburger{
-  display: none;
   cursor: pointer;
   z-index: 101;
 }
-
-.navbar__avatar-img{
-  border-radius: 100%;
-  object-fit: cover;
-  height: 50px;
-  width: 50px;
-}
-
 .navbar__hamburger-hbar{
   border-radius: 10px;
   display: block;
@@ -49,79 +24,105 @@
   transition: all .3s ease-in-out;
   background-color: var(--color-white);
 }
-/* mediaquery celular/tablet */
-@media(max-width:992px){
-  .navbar__hamburger{
-      display: block;
-  }
-  .navbar__hamburger.active .navbar__hamburger-hbar:nth-child(2){
-      opacity: 0;
+/* animacao do hamburger */
+.navbar__hamburger.active .navbar__hamburger-hbar:nth-child(2){
+  opacity: 0;
+}
+.navbar__hamburger.active .navbar__hamburger-hbar:nth-child(1){
+  transform: translateY(8px) rotate(45deg);
+}
+.navbar__hamburger.active .navbar__hamburger-hbar:nth-child(3){
+  transform: translateY(-8px) rotate(-45deg);
+  top: -7px;
+}
+/* __________ */
+
+.navbar__menu{
+  position: absolute;
+  width: 65%;
+  left: -100%;
+  display: flex;
+  top: 70px;
+  gap: 0;
+  background-color: var(--color-orange);
+  height: 100vh;
+  text-align: center;
+  transition: .3s;
+  z-index: 100;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+.navbar__menu.active{
+  left: 0;
+}
+.navbar__menu-item{
+  font-family: "Metropolis", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  display: flex;
+  height: 45px;
+  align-items: center;
+  margin: 3rem 0 0 2rem;
+  box-sizing: border-box;
+}
+/* imagens dos itens */
+.navbar__menu-item:nth-child(1){
+  background-image: url("../assets/icons/cadastro.png");
+  background-repeat: no-repeat;
+}
+.navbar__menu-item:nth-child(2){
+  background-image: url("../assets/icons/mentores.png");
+  background-repeat: no-repeat;
+}
+.navbar__menu-item:nth-child(3){
+  background-image: url("../assets/icons/agendamento.png");
+  background-repeat: no-repeat;
+}
+.navbar__menu-item:nth-child(4){
+  background-image: url("../assets/icons/contato.png");
+  background-repeat: no-repeat;
+}
+.navbar__menu-item:nth-child(5){
+  background-image: url("../assets/icons/comunidade.png");
+  background-repeat: no-repeat;
+}
+/* __________ */
+
+.navbar__menu-link{
+  padding: 16px 0 16px 55px;
+}
+
+.navbar__avatar-img{
+  border-radius: 100%;
+  object-fit: cover;
+  height: 50px;
+  width: 50px;
+}
+
+.logo__icon{
+  width: 200px;
+}
+/* mediaquery tablet/pc */
+@media(min-width:992px){
+
+  .navbar__hamburger-hbar{
+    width: 40px;
+    height: 5px;
   }
   .navbar__hamburger.active .navbar__hamburger-hbar:nth-child(1){
-      transform: translateY(8px) rotate(45deg);
+    transform: translateY(12px) rotate(45deg);
   }
   .navbar__hamburger.active .navbar__hamburger-hbar:nth-child(3){
-      transform: translateY(-8px) rotate(-45deg);
-      top: -7px;
+    transform: translateY(-8px) rotate(-45deg);
+    top: -7px;
   }
-  /* .navbar__avatar-img{
-      display: block;
-      border-radius: 100%;
-  } */
-
   .navbar__menu{
-      position: absolute;
-      width: 65%;
-      left: -100%;
-      display: flex;
-      top: 70px;
-      gap: 0;
-      background-color: var(--color-orange);
-      height: 100vh;
-      text-align: center;
-      transition: .3s;
-      z-index: 100;
-      flex-direction: column;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      justify-content: start;
+    width: 30%;
   }
-  .navbar__menu-item{
-      display: flex;
-      height: 45px;
-      align-items: center;
-      margin: 3rem 0 0 2rem ;
-      box-sizing: border-box;
-  }
-  /* imagens dos itens */
-  .navbar__menu-item:nth-child(1){
-      background-image: url("../assets/icons/cadastro.png");
-      background-repeat: no-repeat;
-  }
-  .navbar__menu-item:nth-child(2){
-      background-image: url("../assets/icons/mentores.png");
-      background-repeat: no-repeat;
-  }
-  .navbar__menu-item:nth-child(3){
-      background-image: url("../assets/icons/agendamento.png");
-      background-repeat: no-repeat;
-  }
-  .navbar__menu-item:nth-child(4){
-      background-image: url("../assets/icons/contato.png");
-      background-repeat: no-repeat;
-  }
-  .navbar__menu-item:nth-child(5){
-      background-image: url("../assets/icons/comunidade.png");
-      background-repeat: no-repeat;
-  }
-/* __________ */
-  .navbar__menu-link{
-      padding: 16px 0 16px 55px;
-  }
-  .navbar__menu.active{
-      left: 0;
-  }
-  .navbar__hamburger-hbar.active{
-      background-color: black;
+
+  .logo__icon{
+    width: 300px;
   }
 }
