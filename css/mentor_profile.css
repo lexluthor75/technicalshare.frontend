@@ -1,0 +1,177 @@
+@import url("./base.css");
+@import url("./header.css");
+@import url("./buttons.css");
+@import url("./schedule.css");
+@import url("./calendar.css");
+@import url("./footer.css");
+
+hr{
+  background-color: var(--color-grey);
+  color: var(--color-grey);
+  margin: 1rem;
+  height: 3px;
+  border: none;
+}
+
+
+.mentor__content{
+  background-color: var(--color-white);
+  margin: 1rem 1.5rem;
+  border-radius: 5px;
+  padding-bottom: 0.15rem;
+}
+
+.mentor__info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mentor__image{
+  width: 83px;
+  height: 83px;
+  border-radius: 50%;
+  padding: 1rem;
+}
+
+.mentor__title{
+  font-size: 0.875rem;
+}
+
+.mentor__category{
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+  background-color: var(--color-orange);
+  color: var(--color-white);
+  padding: 0.5rem 0.25rem;
+  border-radius: 5px;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.mentor__evaluation{
+  background-color: var(--color-purple);
+  color: var(--color-white);
+  font-size: 0.75rem;
+  font-weight: 400;
+  margin: 1rem auto;
+  border-radius: 5px;
+  height: 60px;
+  width: fit-content;
+  padding: 0 1rem 0 0;
+
+}
+
+.mentor__waves{
+  background: transparent url("../assets/images/waves.png") no-repeat;
+  background-size: cover;
+  width: 20px;
+  height: 60px;
+  float: left;
+}
+
+.mentor__rating{
+  padding: 1rem 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.mentor__categoryTitle{
+  padding: 0 1rem;
+}
+
+.mentor__stars{
+  display: flex;
+}
+.star-icon {
+  list-style-type: none;
+  cursor: pointer;
+  color: var(--color-orange);
+  font-size: 20px;
+}
+
+.star-icon::before {
+  content: "\2605";
+}
+
+.star-icon.ativo {
+  content: "\2605";
+}
+
+.star-icon.ativo ~ .star-icon::before {
+  content: "\2605";
+  color: var(--color-white);
+}
+
+.mentor__button{
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0 3rem 0;
+}
+
+
+/* TABLET */
+@media screen and (min-width:768px) {
+  .mentor{
+    width: 80vw;
+    margin: auto;
+  }
+  
+
+  .mentor__structure{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+
+  .mentor__info{
+    align-items: center;
+    text-align: center;
+  }
+
+  .mentor__image{
+    width: 150px;
+    height: 150px;
+  }
+
+  .mentor__title{
+    font-size: 1rem;
+  }
+
+  .mentor__category{
+    font-size: 1rem;
+    padding: 0.75rem 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .mentor__evaluation{
+    width: 220px;
+    margin: auto;
+  }
+ 
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1024px) {
+  .mentor__content{
+    width: 70vw;
+    margin: 1rem auto;
+  }
+  .mentor__structure{
+   justify-content: space-evenly;
+  }
+
+  .mentor__title{
+    font-size: 1.5rem;
+  }
+
+  .mentor__evaluation{
+    font-size: 1rem;
+    padding: 1rem;
+    margin: 0;
+    width: fit-content;
+  }
+}

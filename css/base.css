@@ -1,29 +1,40 @@
 :root {
-  --color-purple: #36357e;
-  --color-orange: #fe4400;
-  --color-white: #ffffff;
-  --color-grey: #dedede;
-}
-
-@font-face {
-  font-family: "Metropolis";
-  src: url("../assets/fonts/Metropolis-Regular.otf");
-}
-
-body {
-  font-family: "Metropolis";
-  background-color: var(--color-grey);
-}
+    --color-purple: #36357e;
+    --color-orange: #fe4400;
+    --color-white: #ffffff;
+    --color-grey: #dedede;
+    --color-black: #000000;
+    --color-dark-grey: #565656;
 
 
-.sr-only {
-  position: absolute;
-  height: 1px;
-  width: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip-path: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
-}
+    /* CALENDAR */
+    --weekdays-border-bottom-color: #404040;
+    --calendar-date-hover-color: #505050;
+    --calendar-current-date-color: #1b1f21;
+    --calendar-today-innerborder-color: transparent;
+    --calendar-nextprev-bg-color: transparent;
+    --calendar-border-radius: 16px;
+  }
+  
+  @font-face {
+    font-family: "Metropolis";
+    src: url("../assets/fonts/Metropolis-Regular.otf");
+  }
+  
+  body {
+    font-family: "Metropolis";
+    background-color: var(--color-grey);
+  }
+  
+  
+  .sr-only {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
