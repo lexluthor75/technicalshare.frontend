@@ -1,0 +1,68 @@
+.button__cta {
+  background-color: var(--color-orange);
+  color: var(--color-white);
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  box-shadow: 0 4px 4px 1px #ac360b;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+
+.form-group label {
+  padding-left: 0.25rem;
+  cursor: pointer;
+}
+
+.radio{
+  cursor: pointer;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--color-purple);
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+}
+
+
+.radio:before{
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: var(--color-purple);
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 400ms ease-in-out;
+  position: absolute;
+}
+
+
+.radio:checked:before {
+  opacity: 1;
+}
+
+.radio:focus{
+  box-shadow: 0 0 5px var(--color-purple);
+}
+
+
+/* TABLET */
+@media screen and (min-width: 768px) {
+  .button__cta {
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+  }
+}
