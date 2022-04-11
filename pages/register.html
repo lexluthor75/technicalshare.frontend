@@ -40,21 +40,22 @@
     </header>
 
     <main>
+        <form action="#" method="post">
         <section class="register">
-            <div class="register__content">
+            <div class="register__content">    
                 <div class="register__info">
                     <img class="register__image" src="../assets/images/user.png" alt="">
                     <label class="sr-only" for="name">Escreva seu nome</label>
-                    <input id="name" type="text" placeholder="Nome">
+                    <input id="name" type="text" placeholder="Nome" required>
                     <label class="sr-only" for="email">Escreva seu email</label>
-                    <input type="email" name="" id="email" placeholder="Email">
+                    <input type="email" name="" id="email" placeholder="Email" required>
                 </div>
 
                 <div class="register__options">
                     <div class="register__specialty">
                         <div class="select">
                             <label class="sr-only" for="specialty">Escolha a sua especialidade</label>
-                            <select name="format" id="specialty">
+                            <select name="format" id="specialty" required>
                                 <option selected disabled>Especialidade</option>
                                 <option value="ux-design">UX Design</option>
                                 <option value="fullstack">Fullstack</option>
@@ -69,7 +70,7 @@
                     <div class="register__specialty">
                         <div class="select">
                             <label class="sr-only" for="skill">Escolha um de suas habilidades</label>
-                            <select name="format" id="skill">
+                            <select name="format" id="skill" required>
                                 <option selected disabled>Habilidade</option>
                                 <option value="ux-research">UX Research</option>
                                 <option value="ux-writing">UX Writing</option>
@@ -101,13 +102,13 @@
 
 
             </div>
-
+        
         </section>
         <div class="register__button">
-            <button id="register" class="button__cta">Cadastrar</button>
+            <input onclick="send()" class="button__cta" type="submit" value="Enviar">
         </div>
 
-
+    </form>
 
 
     </main>

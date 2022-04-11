@@ -1,6 +1,6 @@
-document.addEventListener("DOMContentLoaded", () => {
-  initializeForm();
-});
+// document.addEventListener("DOMContentLoaded", () => {
+//   initializeForm();
+// });
 
 let mentorName = document.getElementById("name");
 let email = document.getElementById("email");
@@ -13,18 +13,18 @@ let mentored = document.getElementById("mentored");
 
 let register = document.getElementById("register");
 
-function initializeForm() {
-  register.addEventListener("click", function (e) {
-    console.log(mentorName.value);
-    console.log(email.value);
-    console.log(specialty.value);
-    console.log(skill.value);
-    if (mentor.checked) {
-      console.log(mentor.value);
-    }
+function send() {
 
-    if (mentored.checked) {
-      console.log(mentored.value);
-    }
-  });
+if(mentorName != ""){}
+  console.log(mentorName.value);
+  console.log(email.value);
+  console.log(specialty.value);
+  console.log(skill.value);
+  if (mentor.checked) {
+    console.log(mentor.value);
+  }
+
+  if (mentored.checked) {
+    console.log(mentored.value);
+  }
 }
