@@ -1,35 +1,55 @@
 // inicializa os cards assim que o HTML é carregado
-document.addEventListener("DOMContentLoaded", () => {
-  initializeCards();
-});
+// document.addEventListener("DOMContentLoaded", () => {
+//   searchCategories();
+// });
 
 // armazena o banco de dados
 // let database = "../database.json";
 
-let identity;
+// let identity;
 
-// área onde mostrará os cards dos mentores
-let cards = document.querySelector(".cards");
-let card = document.createElement("div");
-let image;
-let cardBody;
-let mentorName;
-let category;
-let buttonProfile;
+let searchCategory = document.getElementById("search-category");
 
-// inicializar os cards
-async function initializeCards() {
-  return await getUsers()
-    .then((dataMentors) => {
-      showMentors(dataMentors);
-    })
-    .catch((error) => {
-      console.log(`Error: ${error}`);
-    });
-}
+// chamar a função que filtra os mentores conforme categoria quando der enter
+searchCategory.addEventListener("keypress", function (e) {
+  if (e.key === "Enter") {
+    console.log(searchCategory.value);
+    cards.innerHTML = "";
+    // transforma o valor colocado no input em maiúsculo
+    let categoriaProcurada = searchCategory.value;
+
+    searchCategories(categoriaProcurada);
+
+    // SUBSTITUIR POR FUNÇÃO QUE ESTÁ LINKADA A CATEGORIA AO MENTOR
+    // inicializar os cards
+    async function searchCategories(categoriaProcurada) {
+      return await getCategories(categoriaProcurada)
+        .then((data) => {
+          foundedCategory(data);
+        })
+        .catch((error) => {
+          console.log(`Error: ${error}`);
+        });
+    }
+  }
+});
+
+function foundedCategory(data){
+  if(data.length == 0){
+    cards.innerHTML = `<div class="search__notFound">
+        <h2>Nenhum mentor dessa categoria foi encontrado. Digite novamente</h2>
+      </div>`;
+  }else{
+    for (let i = 0; i < data.length; i++) {
+      createCardFiltered(data, i);
+      console.log(data);
+    }
+  }
+  searchCategory.value = "";
+  }
 
 // cria os cards e adiciona a info de cada usuário dentro deles
-function createCard(dataMentors, id) {
+function createCardFiltered(dataMentors, id) {
   // cria a estrutura do card e adiciona a área de conteúdo (cards)
   card = document.createElement("div");
   card.setAttribute("class", "card");
@@ -74,15 +94,4 @@ function createCard(dataMentors, id) {
   cardBody.appendChild(buttonProfile);
 }
 
-// função para inicializar a área de mentores na área de destaque
-// nesse primeiro momento pega os 4 primeiros registrados no Banco de dados
-function showMentors(dataMentors) {
-  for (let i = 0; i < 4; i++) {
-    createCard(dataMentors, i);
-  }
-}
 
-function openProfile(identity) {
-  console.log(identity);
-  // window.location.href = "../pages/mentor_profile.html"
-}
