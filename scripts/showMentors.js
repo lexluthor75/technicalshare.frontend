@@ -45,6 +45,10 @@ function createCard(dataMentors, id) {
   mentorName.textContent = dataMentors[id].name;
   cardBody.appendChild(mentorName);
 
+  // let categoryBody = document.createElement("div")
+  // categoryBody.setAttribute("class", "card__category")
+  // cardBody.appendChild(categoryBody)
+
   // adiciona a category (área de interesse)
   let category = document.createElement("p");
   category.setAttribute("class", "card__category");
