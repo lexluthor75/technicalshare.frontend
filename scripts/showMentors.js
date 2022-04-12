@@ -4,21 +4,19 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // armazena o banco de dados
-let database = "../database.json";
+// let database = "../database.json";
 
 let identity;
 
 // inicializar os cards
-function initializeCards() {
-  fetch(database)
-    .then((response) => {
-      return response.json();
-    })
-    .then((dataMentors) => showMentors(dataMentors))
-    .catch((error) => {
-      console.log(error);
-    });
+async function initializeCards() {
+  return await getUsers().then(data =>{
+    showMentors(data)
+  }).catch(error => {
+    console.log(`Error: ${error}`)
+  })
 }
+
 
 // cria os cards e adiciona a info de cada usuário dentro deles
 function createCard(dataMentors, id) {
@@ -44,19 +42,19 @@ function createCard(dataMentors, id) {
   // adiciona o nome do mentor
   let mentorName = document.createElement("h2");
   mentorName.setAttribute("class", "card__title");
-  mentorName.textContent = dataMentors.mentors[id].name;
+  mentorName.textContent = dataMentors[id].name;
   cardBody.appendChild(mentorName);
 
   // adiciona a category (área de interesse)
   let category = document.createElement("p");
   category.setAttribute("class", "card__category");
-  category.textContent = dataMentors.mentors[id].category;
+  category.textContent = dataMentors[id].email;
   cardBody.appendChild(category);
 
   // adiciona o botão para ver o perfil do mentor em uma segunda tela, ao clicar no botão é identificado o id do mentor
   let buttonProfile = document.createElement("button");
   buttonProfile.setAttribute("class", "card__button");
-  // buttonProfile.setAttribute("class", "btn btn-warning btn-outline-dark");
+  buttonProfile.setAttribute("id", dataMentors[id].id)
   buttonProfile.innerHTML = "Saiba +";
   buttonProfile.addEventListener('click', function(e){
     identity = (e.target.id)
@@ -76,6 +74,6 @@ function showMentors(dataMentors) {
 
 function openProfile(identity){
   console.log(identity)
-  window.location.href = "../pages/mentor_profile.html"
+  // window.location.href = "../pages/mentor_profile.html"
 }
 
