@@ -14,11 +14,15 @@
   cursor: pointer;
   z-index: 101;
 }
+.scroll{
+  position: fixed;
+}
+
 .navbar__hamburger-hbar{
   border-radius: 10px;
   display: block;
-  width: 25px;
-  height: 3px;
+  width: 45px;
+  height: 5px;
   margin: 5px auto;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
@@ -29,20 +33,18 @@
   opacity: 0;
 }
 .navbar__hamburger.active .navbar__hamburger-hbar:nth-child(1){
-  transform: translateY(8px) rotate(45deg);
+  transform: translateY(12px) rotate(45deg);
 }
 .navbar__hamburger.active .navbar__hamburger-hbar:nth-child(3){
   transform: translateY(-8px) rotate(-45deg);
-  top: -7px;
 }
 /* __________ */
 
 .navbar__menu{
-  position: absolute;
+  position: fixed;
   width: 65%;
   left: -100%;
   display: flex;
-  top: 70px;
   background-color: var(--color-orange);
   height: 100vh;
   text-align: center;
@@ -53,11 +55,11 @@
   flex-wrap: wrap;
   justify-content: start;
   padding-top: 2.5rem;
-  top: 1px;
+  top: 0px;
   background-image:url(../assets/icons/ondaS.svg);
   background-repeat: no-repeat;
   background-position-x: right;
-  background-size: 50px;
+  background-size: 110px;
 }
 .navbar__menu.active{
   left: 0;
@@ -130,7 +132,8 @@
     width: auto;
     position: relative;
     height: auto;
-    top: 0;
+    top: -20px;
+    background-image: none;
   }
   .navbar__menu-item{
     margin: 0;
@@ -153,7 +156,4 @@
   .logo__icon{
     width: 290px;
   } 
-  .navbar__avatar-img {
-    background-color: aqua;
-  }
 }
