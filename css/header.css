@@ -43,7 +43,6 @@
   left: -100%;
   display: flex;
   top: 70px;
-  gap: 0;
   background-color: var(--color-orange);
   height: 100vh;
   text-align: center;
@@ -53,6 +52,12 @@
   align-items: flex-start;
   flex-wrap: wrap;
   justify-content: start;
+  padding-top: 2.5rem;
+  top: 1px;
+  background-image:url(../assets/icons/ondaS.svg);
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-size: 50px;
 }
 .navbar__menu.active{
   left: 0;
@@ -66,27 +71,34 @@
   align-items: center;
   margin: 3rem 0 0 2rem;
   box-sizing: border-box;
+  color: var(--color-white);
 }
 /* imagens dos itens */
 .navbar__menu-item:nth-child(1){
-  background-image: url("../assets/icons/cadastro.png");
+  background-image: url("../assets/icons/cadastro.svg");
   background-repeat: no-repeat;
+  background-size: 45px;
 }
 .navbar__menu-item:nth-child(2){
-  background-image: url("../assets/icons/mentores.png");
+  background-image: url("../assets/icons/mentores.svg");
   background-repeat: no-repeat;
+  background-size: 45px;
+  left: 1px;
 }
 .navbar__menu-item:nth-child(3){
-  background-image: url("../assets/icons/agendamento.png");
+  background-image: url("../assets/icons/agendamento.svg");
   background-repeat: no-repeat;
+  background-size: 45px;
 }
 .navbar__menu-item:nth-child(4){
-  background-image: url("../assets/icons/contato.png");
+  background-image: url("../assets/icons/contato.svg");
   background-repeat: no-repeat;
+  background-size: 45px;
 }
 .navbar__menu-item:nth-child(5){
-  background-image: url("../assets/icons/comunidade.png");
+  background-image: url("../assets/icons/comunidade.svg");
   background-repeat: no-repeat;
+  background-size: 45px;
 }
 /* __________ */
 
@@ -106,23 +118,42 @@
 }
 /* mediaquery tablet/pc */
 @media(min-width:992px){
-
   .navbar__hamburger-hbar{
-    width: 40px;
-    height: 5px;
-  }
-  .navbar__hamburger.active .navbar__hamburger-hbar:nth-child(1){
-    transform: translateY(12px) rotate(45deg);
-  }
-  .navbar__hamburger.active .navbar__hamburger-hbar:nth-child(3){
-    transform: translateY(-8px) rotate(-45deg);
-    top: -7px;
+    display: none;
   }
   .navbar__menu{
-    width: 30%;
+    display:flex;
+    justify-content: space-between;
+    flex-direction: row;
+    left: 0;
+    gap: 0;
+    width: auto;
+    position: relative;
+    height: auto;
+    top: 0;
   }
-
+  .navbar__menu-item{
+    margin: 0;
+  }
+  #navbar__menu-itemIMG{
+    background-image: none;
+  }
+  .navbar__menu-link{
+    padding: 1rem;
+  }
+  .navbar__menu-link:hover{
+    color: var(--color-grey);
+    transition: .3s;
+  }
+  .navbar__hamburger{
+    display: none;
+    cursor: pointer;
+    z-index: 101;
+  }
   .logo__icon{
-    width: 300px;
+    width: 290px;
+  } 
+  .navbar__avatar-img {
+    background-color: aqua;
   }
 }
