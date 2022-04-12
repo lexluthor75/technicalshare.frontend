@@ -34,8 +34,10 @@
   padding: 0.5rem 0.25rem;
   border-radius: 5px;
   text-transform: uppercase;
-  width: fit-content;
+  width: auto;
+  height: auto;
 }
+
 
 .card__button {
   cursor: pointer;
@@ -58,11 +60,15 @@
     height: 150px;
   }
 
+  .card__info{
+    width: fit-content;
+  }
   .card__title{
     font-size: 1.5rem;
   }
 
   .card__category{
+    width: fit-content;
     font-size: 1rem;
   }
 
