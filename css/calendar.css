@@ -18,7 +18,7 @@
   min-width: 250px;
   background: var(--color-grey);
   color: var(--color-black);
-  margin: 1rem 0.5rem 2rem 0.5rem;
+  margin: 1rem auto;
   box-sizing: border-box;
   overflow: hidden;
   font-weight: normal;

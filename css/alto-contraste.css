@@ -10,8 +10,8 @@
 .alto-contraste main,
 .alto-contraste aside,
 .alto-contraste article {
-    background: black;
-    color: white;
+    background: var(--contrast-black);
+    color: var(--contrast-white);
 }
 
 
@@ -26,18 +26,18 @@
 .alto-contraste strong,
 .alto-contraste em,
 .alto-contraste span {
-    color: var(--contrast-white);
+    color: var(--contrast-white) !important;
 }
 .alto-contraste a{
-    color: var(--contrast-yellow);
+    color: var(--contrast-yellow) !important;
 }
 
 .alto-contraste button,
 .alto-contraste input[type=button],
 .alto-contraste input[type=reset],
 .alto-contraste input[type=submit] {
-    background: var(--contrast-black);
-    color: var(--contrast-yellow);
+    background: var(--contrast-black) !important;
+    color: var(--contrast-yellow) !important;
     border: none;
 }
 
@@ -50,15 +50,15 @@
 }
 /* _____________ */
 
-/* ajustes espeficicos */
+/* ajustes espeficicos index*/
 .alto-contraste .contraste__btn{
     background-image: url(../assets/icons/contrasteYL.png);
     background-color: var(--contrast-black);
     background-repeat: no-repeat;
     background-size: 30px;
     background-position: center;
-    width: 50px;
-    height: 70px;
+    width: 60px;
+    height: 86px;
     position: relative;
     cursor: pointer;
 }
@@ -76,3 +76,72 @@
 .alto-contraste .about{
     border: 1px solid;
 }
+/* _____________ */
+
+/* ajustes espeficicos mentor profile*/
+    .alto-contraste .mentor__evaluation{
+        border: 1px solid var(--contrast-white);
+        border-radius: 5px;
+    }
+    .alto-contraste .star-icon{
+        color: var(--color-orange) !important;
+    }
+    .alto-contraste .zoom__icon{
+        background-image: url(../assets/images/zoomWT.png);
+        background-size: 80px;
+        background-position-x: 56px;
+        background-position-y: 8px;
+        background-repeat: no-repeat;
+    }
+    .alto-contraste .discord__icon{
+        background-image: url(../assets/images/discordWT.png);
+        background-size: 75px;
+        background-position: center;
+        background-position-x: 53px;
+        background-repeat: no-repeat;
+    }
+      .alto-contraste .form-group {
+        width: 206px;
+        height: 55px;
+    }
+    .alto-contraste .radio {
+        cursor: pointer;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border: 2px solid var(--contrast-black);
+        border-radius: 50%;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        outline: none;
+    }
+    .alto-contraste input[type="radio"]{
+        filter: invert(100%) hue-rotate(18deg) brightness(1.7);
+    }
+
+    .alto-contraste .calendar .calendar-inner .calendar-today-date {
+        display: grid;
+        text-align: center;
+        cursor: pointer;
+        margin: 3px 0px;
+        background: var(--contrast-black);
+        padding: 8px 0px;
+        border-radius: 10px;
+        width: 80%;
+        margin: auto;
+    }
+    .alto-contraste .calendar .calendar-inner .calendar-body .prev-dates,
+    .calendar .calendar-inner .calendar-body .next-dates {
+      color: var(--contrast-white);
+    }
+    .alto-contraste .calendar {
+        border: 1px solid var(--contrast-white) ;
+        border-radius: var(--calendar-border-radius);
+    }
+    .alto-contraste .arrow{
+        filter: invert(1);
+    }
+/* _____________ */
