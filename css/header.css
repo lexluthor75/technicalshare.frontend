@@ -59,6 +59,7 @@
   background-repeat: no-repeat;
   background-position-x: right;
   background-size: 110px;
+  transition: .3s;
 }
 .navbar__menu.active{
   left: 0;
