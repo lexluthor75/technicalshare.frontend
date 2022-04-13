@@ -1,16 +1,6 @@
 
 @import url("./base.css");
 
-/* :root {
-   --weekdays-border-bottom-color: #404040;
-  --calendar-date-hover-color: #505050;
-  --calendar-current-date-color: #ffffff;
-  --calendar-today-innerborder-color: transparent;
-  --calendar-nextprev-bg-color: transparent;
-  --calendar-border-radius: 16px;
-} */
-
-
 
 .calendar {
   position: relative;
@@ -133,7 +123,6 @@
 .calendar .calendar-inner .calendar-controls .calendar-next a,
 .calendar .calendar-inner .calendar-controls .calendar-prev a {
   color: var(--color-black);
-  /* font-family: arial, consolas, sans-serif; */
   font-size: 26px;
   text-decoration: none;
   padding: 4px 12px;
