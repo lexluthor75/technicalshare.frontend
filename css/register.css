@@ -1,0 +1,131 @@
+@import url("base.css");
+@import url("header.css");
+@import url("buttons.css");
+@import url("inputs.css");
+@import url("footer.css");
+
+.register {
+  background-color: var(--color-white);
+  margin: 1rem 1.5rem;
+  border-radius: 5px;
+  padding-bottom: 0.15rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register__image {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  padding: 1rem;
+}
+
+.register__content {
+  width: 80%;
+}
+
+.register__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.register__info input {
+  background-color: var(--color-purple);
+  color: var(--color-white);
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  width: 200px;
+  font-size: 0.875rem;
+}
+
+.register__info input::placeholder {
+  color: var(--color-white);
+}
+
+.register__options{
+  margin: 1rem auto;
+}
+
+.register__specialty {
+  margin-top: 1rem;
+}
+
+.register__profile {
+  background-color: var(--color-purple);
+  border-radius: 5px;
+  width: 220px;
+  margin: 1rem auto 1rem auto;
+  color: var(--color-white);
+  /* padding: 1rem 0.5rem; */
+}
+
+.register__dots {
+  background: transparent url("../assets/images/big_dots.png") no-repeat;
+  background-size: cover;
+  width: 60px;
+  height: 150px;
+  float: right;
+}
+
+.register__title {
+  padding: 1rem;
+}
+
+.specialty__options {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1rem 2rem 1rem;
+}
+
+.register__button {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .register {
+    margin: 1.5rem 2rem;
+  }
+
+  .register__info input {
+    width: 300px;
+  }
+
+  .register__options {
+    display: flex;
+    justify-content: space-around;
+  }
+  .register__profile {
+    width: 30vw;
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+  .register{
+    width: 70vw;
+    margin: 1rem auto;
+  }
+
+  .register__image{
+    width: 150px;
+    height: 150px;
+  }
+
+  .register__info input{
+    font-size: 1.2rem;
+  }
+
+  .register__profile{
+    width: 20vw;
+  }
+ 
+}
+
