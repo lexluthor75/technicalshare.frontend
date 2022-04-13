@@ -95,6 +95,7 @@ body {
 
 .mentors {
   margin-top: 2rem;
+  margin-bottom: 6rem;
 }
 
 .mentors__title {
@@ -183,7 +184,7 @@ body {
     font-weight: 400;
   }
   .cards{
-    width: 60vw;
+    width: 72vw;
   }
 
   .search__notFound{

@@ -19,14 +19,13 @@ let buttonProfile;
 
 // inicializar os cards
 async function initializeCards() {
-  return await getUsers()
-    .then((dataMentors) => {
-      showMentors(dataMentors);
-    })
-    .catch((error) => {
-      console.log(`Error: ${error}`);
-    });
+  return await getUsers().then(data =>{
+    showMentors(data)
+  }).catch(error => {
+    console.log(`Error: ${error}`)
+  })
 }
+
 
 // cria os cards e adiciona a info de cada usuário dentro deles
 function createCard(dataMentors, id) {
@@ -38,7 +37,7 @@ function createCard(dataMentors, id) {
   // adiciona a imagem do mentor dentro do card
   image = document.createElement("img");
   image.setAttribute("class", "card__image");
-  image.setAttribute("src", "../assets/images/user.png");
+  image.setAttribute("src", "./assets/images/user.png");
   card.appendChild(image);
 
   // adiciona a estrutura do card body (onde ficarão as demais infos)
@@ -65,11 +64,11 @@ function createCard(dataMentors, id) {
   // adiciona o botão para ver o perfil do mentor em uma segunda tela, ao clicar no botão é identificado o id do mentor
   buttonProfile = document.createElement("button");
   buttonProfile.setAttribute("class", "card__button");
-  buttonProfile.setAttribute("id", dataMentors[id].id);
+  buttonProfile.setAttribute("id", dataMentors[id].id)
   buttonProfile.innerHTML = "Saiba +";
   buttonProfile.addEventListener("click", function (e) {
     identity = e.target.id;
-    openProfile(identity);
+    openProfile();
   });
   cardBody.appendChild(buttonProfile);
 }
@@ -83,7 +82,7 @@ function showMentors(dataMentors) {
 }
 
 // o window.location redirect será substituído por uma rota
-function openProfile(identity){
+function openProfile(){
   console.log(identity)
-  window.location.href = "../pages/mentor_profile.html"
+  window.location.href = "./pages/mentor_profile.html?id="+identity
 }
