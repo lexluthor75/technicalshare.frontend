@@ -45,7 +45,7 @@
   width: 65%;
   left: -100%;
   display: flex;
-  background-color: inherit;
+  background-color: var(--color-orange);
   height: 100vh;
   text-align: center;
   z-index: 100;
@@ -115,7 +115,12 @@
 }
 
 .logo__icon{
-  width: 200px;
+  width: 193px;
+  height: 55px;
+  background-repeat: no-repeat;
+  background-image: url(../assets/images/logo.png);
+  background-size: 193px;
+  background-position: center;
 }
 /* mediaquery tablet/pc */
 @media(min-width:992px){
@@ -123,6 +128,7 @@
     display: none;
   }
   .navbar__menu{
+    background-color: inherit;
     display:flex;
     justify-content: space-between;
     flex-direction: row;
@@ -153,8 +159,9 @@
     z-index: 101;
   }
   .logo__icon{
-    width: 290px;
-  } 
+    width: 250px;
+    background-size: 250px;
+  }
 
   .contraste__btn{
     width: 50px;
