@@ -26,18 +26,18 @@
 .alto-contraste strong,
 .alto-contraste em,
 .alto-contraste span {
-    color: white;
+    color: var(--contrast-white);
 }
 .alto-contraste a{
-    color: yellow;
+    color: var(--contrast-yellow);
 }
 
 .alto-contraste button,
 .alto-contraste input[type=button],
 .alto-contraste input[type=reset],
 .alto-contraste input[type=submit] {
-    background: black;
-    color: yellow;
+    background: var(--contrast-black);
+    color: var(--contrast-yellow);
     border: none;
 }
 
@@ -53,7 +53,7 @@
 /* ajustes espeficicos */
 .alto-contraste .contraste__btn{
     background-image: url(../assets/icons/contrasteYL.png);
-    background-color: var(--color-black);
+    background-color: var(--contrast-black);
     background-repeat: no-repeat;
     background-size: 30px;
     background-position: center;
