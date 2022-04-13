@@ -109,6 +109,16 @@ body {
   flex-direction: column;
 }
 
+.search__notFound{
+  text-align: center;
+  margin: 2rem auto 2rem auto;
+  width: 60vw;
+  font-size: 0.875rem;
+  font-weight: bold;
+  line-height: 1.5;  
+  color: var(--color-purple);
+}
+
 /* TABLET */
 @media screen and (min-width: 768px) {
   .about {
@@ -144,6 +154,11 @@ body {
     width: 90vw;
     margin: auto;
   }
+
+  .search__notFound{
+    font-size: 1.2rem;
+    width: 50vw;
+  }
 }
 
 
@@ -169,5 +184,10 @@ body {
   }
   .cards{
     width: 60vw;
+  }
+
+  .search__notFound{
+    font-size: 1.5rem;
+    width: 40vw;
   }
 }
