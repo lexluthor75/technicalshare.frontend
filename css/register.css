@@ -86,6 +86,7 @@
 .register__button {
   display: flex;
   justify-content: center;
+  margin-bottom: 6rem;
 }
 
 @media screen and (min-width: 768px) {

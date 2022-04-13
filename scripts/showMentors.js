@@ -68,7 +68,7 @@ function createCard(dataMentors, id) {
   buttonProfile.innerHTML = "Saiba +";
   buttonProfile.addEventListener("click", function (e) {
     identity = e.target.id;
-    openProfile(identity);
+    openProfile();
   });
   cardBody.appendChild(buttonProfile);
 }
@@ -82,7 +82,7 @@ function showMentors(dataMentors) {
 }
 
 // o window.location redirect será substituído por uma rota
-function openProfile(identity){
+function openProfile(){
   console.log(identity)
-  // window.location.href = "../pages/mentor_profile.html"
+  window.location.href = "../pages/mentor_profile.html?id="+identity
 }
