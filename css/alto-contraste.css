@@ -145,3 +145,33 @@
         filter: invert(1);
     }
 /* _____________ */
+
+/* ajustes especificos register page */
+    .alto-contraste .register__content{
+        border: 1px solid var(--contrast-white) ;
+        margin-top: 2px;
+    }
+    .alto-contraste .register__profile{
+        border: 1px solid var(--contrast-white) ;
+    }
+    .alto-contraste .button__cta{
+        border: 1px solid var(--contrast-white) !important;
+        box-shadow: 0 4px 4px 1px var(--contrast-white);
+    }
+    .alto-contraste .register__info input{
+        background-color: var(--contrast-white);
+        color: var(--contrast-black);
+    }
+    .alto-contraste .register__info input::placeholder{
+        color: var(--color-black);
+    }
+    .alto-contraste #specialty, 
+    .alto-contraste #skill, 
+    .alto-contraste .select::after{
+        background-color: var(--contrast-white);
+        color: var(--color-black);
+    }
+    .alto-contraste .select:hover::after{
+        color: var(--color-orange);
+    }
+/* _____________ */
